@@ -22,14 +22,14 @@ import IronManHUD from './IronManHUD';
 const PORTALS_ROW1 = [
   { id: 'hangar',      path: '/hangar',      icon: Rocket,       label: 'Hangar',      desc: 'Major Projects',    tooltip: 'Full-stack & ML systems shipped to production.', colorVar: '--accent-amber',  rgbVar: '--rgb-amber'  },
   { id: 'engine-room', path: '/engine-room', icon: Wrench,       label: 'Engine Room', desc: 'Skills & Tech Stack', tooltip: 'Proficiency bars, language breakdowns, and tools.', colorVar: '--accent-blue',   rgbVar: '--rgb-blue'   },
-  { id: 'library',     path: '/library',     icon: BookOpen,     label: 'Library',     desc: 'Books & Learnings', tooltip: 'Books that rewired my thinking, with key takeaways.', colorVar: '--accent-gold',   rgbVar: '--rgb-gold'   },
+  { id: 'hall-of-fame', path: '/hall-of-fame', icon: Trophy,       label: 'Hall of Fame', desc: 'Achievements',     tooltip: 'Competitions won, papers published, awards earned.', colorVar: '--accent-purple', rgbVar: '--rgb-purple' },
 ];
 
 const PORTALS_ROW2 = [
-  { id: 'ai-lab',       path: '/ai-lab',       icon: BrainCircuit, label: 'AI Lab',       desc: 'AI Experiments',   tooltip: 'Live ML experiments, models, and research notes.', colorVar: '--accent-teal',   rgbVar: '--rgb-teal'   },
-  { id: 'hall-of-fame', path: '/hall-of-fame', icon: Trophy,       label: 'Hall of Fame', desc: 'Achievements',     tooltip: 'Competitions won, papers published, awards earned.', colorVar: '--accent-purple', rgbVar: '--rgb-purple' },
+  { id: 'library',     path: '/library',     icon: BookOpen,     label: 'Library',     desc: 'Books & Learnings', tooltip: 'Books that rewired my thinking, with key takeaways.', colorVar: '--accent-gold',   rgbVar: '--rgb-gold'   },
+  { id: 'ai-lab',       path: '/ai-lab',       icon: BrainCircuit, label: 'Experiments',       desc: 'Labs & Activities',   tooltip: 'Live ML experiments, models, and research notes.', colorVar: '--accent-teal',   rgbVar: '--rgb-teal'   },
+  { id: 'about',        path: '/about',        icon: User,         label: 'About',        desc: 'The Person',       tooltip: 'The story behind the builder.', colorVar: '--accent-blue',   rgbVar: '--rgb-blue'   },
   { id: 'control-room', path: '/control-room', icon: Radio,        label: 'Control Room', desc: 'Contact & Résumé',  tooltip: 'Links, channels, and the mission briefing.', colorVar: '--accent-green',  rgbVar: '--rgb-green'  },
-  { id: 'about',        path: '/about',        icon: User,         label: 'About',        desc: 'The Person',       tooltip: 'The story behind the builder.', colorVar: '--accent-teal',   rgbVar: '--rgb-teal'   },
 ];
 
 const PORTALS = [...PORTALS_ROW1, ...PORTALS_ROW2];

@@ -393,9 +393,9 @@ export default function AILab() {
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <ZoneHeader
-          zone="🧠  ZONE · AI LAB"
-          title="AI Research Lab"
-          subtitle="Live experiments from the frontier. Click any card to reveal what broke."
+          zone="🧠  ZONE · EXPERIMENTS"
+          title="Experiments"
+          subtitle="Live experiments, activities, and research logs."
           accentColor="var(--accent-teal)"
         />
 
@@ -420,24 +420,35 @@ export default function AILab() {
           )}
         </AnimatePresence>
 
-        {/* Experiment grid — asymmetric */}
+        {/* Under Development Placeholder */}
         <AnimatePresence>
           {phase >= 3 && (
             <motion.div
-              key="grid"
-              variants={GRID_V}
-              initial="hidden"
-              animate="visible"
+              key="under-dev"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
-                gridAutoRows: 'auto',
-                gap: '1.2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '5rem 2rem',
+                background: 'rgba(10, 22, 30, 0.4)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: 'var(--radius-lg)',
+                border: '1px dashed rgba(0,255,209,0.3)',
+                textAlign: 'center',
+                marginTop: '1rem'
               }}
             >
-              {EXPERIMENTS.map((exp, i) => (
-                <ExperimentCard key={exp.id} exp={exp} index={i} />
-              ))}
+              <Loader2 size={40} color="var(--accent-teal)" style={{ marginBottom: '1.5rem', animation: 'spin 2.5s linear infinite' }} />
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+                Lab Under Development
+              </h2>
+              <p style={{ color: 'var(--text-muted)', maxWidth: '400px', fontSize: '0.9rem', lineHeight: 1.6 }}>
+                The neural substrate is still forming. I am currently preparing the first batch of live experiments and research logs. Check back soon.
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
