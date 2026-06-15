@@ -657,27 +657,21 @@ export default function HubMap() {
           <Hero />
         </div>
 
-        {/* Portal grid — 3 top, 4 bottom */}
+        {/* Portal grid — 3 top, 4 bottom on desktop, flattened on mobile */}
         <motion.div
+          className="mobile-grid-parent"
           variants={GRID_VARIANTS} initial="hidden" animate="visible"
-          style={{ width: '100%', maxWidth: '980px' }}
+          style={{ width: '100%', maxWidth: '980px', display: 'flex', flexDirection: 'column', gap: 'clamp(0.85rem, 2vw, 1.4rem)' }}
         >
           {/* Row 1 — 3 cards */}
-          <div className="portal-grid" style={{
-            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-            gap: 'clamp(0.85rem, 2vw, 1.4rem)',
-            marginBottom: 'clamp(0.85rem, 2vw, 1.4rem)',
-          }}>
+          <div className="desktop-row desktop-row-3">
             {PORTALS_ROW1.map((p, i) => (
               <PortalCard key={p.id} portal={p} index={i} />
             ))}
           </div>
 
-          {/* Row 2 — 4 cards, no offset */}
-          <div className="portal-grid" style={{
-            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
-            gap: 'clamp(0.85rem, 2vw, 1.4rem)',
-          }}>
+          {/* Row 2 — 4 cards */}
+          <div className="desktop-row desktop-row-4">
             {PORTALS_ROW2.map((p, i) => (
               <PortalCard key={p.id} portal={p} index={i + 3} />
             ))}
@@ -712,16 +706,24 @@ export default function HubMap() {
 
       {/* Mobile grid override */}
       <style>{`
-        .portal-grid {
+        .desktop-row {
           display: grid;
+          gap: clamp(0.85rem, 2vw, 1.4rem);
         }
+        .desktop-row-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .desktop-row-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
         @media (max-width: 800px) {
-          .portal-grid {
+          .mobile-grid-parent {
+            display: grid !important;
             grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .desktop-row {
+            display: contents; /* Flattens rows into the parent grid */
           }
         }
         @media (max-width: 480px) {
-          .portal-grid {
+          .mobile-grid-parent {
             grid-template-columns: repeat(1, 1fr) !important;
           }
         }
