@@ -233,10 +233,10 @@ function PortalCard({ portal, index }) {
           <motion.span
             key="pulse"
             aria-hidden
-            initial={{ opacity: 0.6, scale: 0.85 }}
-            animate={{ opacity: 0, scale: 1.35 }}
+            initial={{ opacity: 0.4, scale: 0.95 }}
+            animate={{ opacity: 0, scale: 1.08 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.0, ease: 'easeOut' }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
             style={{
               position: 'absolute', inset: 0,
               borderRadius: 'var(--radius-lg)',
