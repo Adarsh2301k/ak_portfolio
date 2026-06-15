@@ -14,7 +14,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Rocket, Wrench, BookOpen, BrainCircuit, Trophy, Radio, User } from 'lucide-react';
+import { Rocket, Wrench, BookOpen, BrainCircuit, Trophy, Radio, User, Github, Linkedin, Twitter, Code2 } from 'lucide-react';
 import IronManHUD from './IronManHUD';
 
 /* Row 1: Hangar, Engine Room, Library */
@@ -663,8 +663,7 @@ export default function HubMap() {
           style={{ width: '100%', maxWidth: '980px' }}
         >
           {/* Row 1 — 3 cards */}
-          <div style={{
-            display: 'grid',
+          <div className="portal-grid" style={{
             gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
             gap: 'clamp(0.85rem, 2vw, 1.4rem)',
             marginBottom: 'clamp(0.85rem, 2vw, 1.4rem)',
@@ -675,8 +674,7 @@ export default function HubMap() {
           </div>
 
           {/* Row 2 — 4 cards, no offset */}
-          <div style={{
-            display: 'grid',
+          <div className="portal-grid" style={{
             gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
             gap: 'clamp(0.85rem, 2vw, 1.4rem)',
           }}>
@@ -688,14 +686,43 @@ export default function HubMap() {
 
         {/* Status bar */}
         <StatusBar />
+
+        {/* Social Footer */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.8, duration: 0.6 }}
+          style={{ display: 'flex', gap: '1.5rem', marginTop: '1.5rem' }}
+        >
+          {[
+            { name: 'GitHub',   icon: Github,   href: 'https://github.com/Adarsh2301k' },
+            { name: 'LinkedIn', icon: Linkedin, href: '#' },
+            { name: 'Twitter',  icon: Twitter,  href: '#' },
+            { name: 'LeetCode', icon: Code2,    href: '#' },
+          ].map((s) => (
+            <a key={s.name} href={s.href} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}
+               onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-teal)'}
+               onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+               aria-label={s.name}>
+              <s.icon size={20} />
+            </a>
+          ))}
+        </motion.div>
       </div>
 
       {/* Mobile grid override */}
       <style>{`
-        @media (max-width: 600px) {
-          #hubmap-grid, #hubmap-grid > div > div {
+        .portal-grid {
+          display: grid;
+        }
+        @media (max-width: 800px) {
+          .portal-grid {
             grid-template-columns: repeat(2, 1fr) !important;
-            padding-left: 0 !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .portal-grid {
+            grid-template-columns: repeat(1, 1fr) !important;
           }
         }
         @keyframes orbit-spin { to { transform: rotate(360deg); } }
