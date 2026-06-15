@@ -144,10 +144,10 @@ const TX_LINES = [
   },
   {
     id: 'tx-leetcode',
-    icon: Radio,
+    icon: Code2,
     label: 'LEETCODE',
-    value: '@adarsh2301k',
-    href: 'https://leetcode.com/adarsh2301k',
+    value: 'leetcode.com/u/adarsh2301k',
+    href: 'https://leetcode.com/u/adarsh2301k/',
   },
 ];
 

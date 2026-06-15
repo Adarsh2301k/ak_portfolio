@@ -690,9 +690,9 @@ export default function HubMap() {
         >
           {[
             { name: 'GitHub',   icon: Github,   href: 'https://github.com/Adarsh2301k' },
-            { name: 'LinkedIn', icon: Linkedin, href: '#' },
+            { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/adarshkesh23/' },
             { name: 'Twitter',  icon: Twitter,  href: '#' },
-            { name: 'LeetCode', icon: Code2,    href: '#' },
+            { name: 'LeetCode', icon: Code2,    href: 'https://leetcode.com/u/adarsh2301k/' },
           ].map((s) => (
             <a key={s.name} href={s.href} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}
                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent-teal)'}
