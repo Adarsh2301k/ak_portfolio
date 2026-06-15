@@ -120,13 +120,7 @@ function OpenBookView({ book, onClose }) {
         overflowY: 'auto'
       }}>
         <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-          <div style={{
-            width: '80px', height: '120px', background: book.color,
-            borderRadius: '4px 8px 8px 4px', boxShadow: '5px 5px 15px rgba(0,0,0,0.5)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>
-             <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: '#000', fontWeight: 'bold' }}>{book.shortTitle}</span>
-          </div>
+
           <div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: '#FFF', lineHeight: 1.2, marginBottom: '0.3rem' }}>{book.title}</h2>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: book.color }}>{book.author}</p>

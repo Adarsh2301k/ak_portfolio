@@ -46,7 +46,7 @@ export default function ZoneHeader({ zone, title, subtitle, accentColor = 'var(-
         transition={{ delay: 0.18, duration: 0.45 }}
         style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+          fontSize: 'clamp(1.75rem, 4.5vw, 3.2rem)',
           color: 'var(--text-primary)',
           marginBottom: '0.6rem',
           lineHeight: 1.1,
@@ -62,7 +62,7 @@ export default function ZoneHeader({ zone, title, subtitle, accentColor = 'var(-
           animate={{ opacity: 1 }}
           transition={{ delay: 0.28, duration: 0.45 }}
           style={{
-            fontSize: '1.05rem',
+            fontSize: '0.95rem',
             color: 'var(--text-muted)',
             maxWidth: '560px',
           }}
