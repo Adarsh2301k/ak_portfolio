@@ -14,7 +14,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { Github, Linkedin, Mail, FileDown, Radio, Send, Terminal } from 'lucide-react';
+import { Github, Linkedin, Mail, FileDown, Radio, Send, Terminal, Code2 } from 'lucide-react';
 import ZoneHeader from '../components/ZoneHeader';
 
 /* ─── Design constants ───────────────────────────────────────────────────── */
