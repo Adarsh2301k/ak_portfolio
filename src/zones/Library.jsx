@@ -86,17 +86,10 @@ function OpenBookView({ book, onClose }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
       transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+      className="open-book-view"
       style={{
-        width: '100%', maxWidth: '850px', 
-        height: '100%', maxHeight: '550px', minHeight: '350px',
-        background: 'rgba(10,12,16,0.85)',
-        backdropFilter: 'blur(20px)',
-        borderRadius: '12px',
         border: `1px solid ${book.color}40`,
         boxShadow: `0 20px 50px rgba(0,0,0,0.8), 0 0 40px ${book.color}20`,
-        display: 'flex',
-        overflow: 'hidden',
-        position: 'relative'
       }}
     >
       <button
@@ -113,12 +106,7 @@ function OpenBookView({ book, onClose }) {
       </button>
 
       {/* Left Page */}
-      <div className="custom-scroll" style={{
-        flex: 1, padding: '2.5rem',
-        borderRight: '1px solid rgba(255,255,255,0.05)',
-        background: `linear-gradient(to right, transparent, rgba(255,255,255,0.02))`,
-        overflowY: 'auto'
-      }}>
+      <div className="open-book-page-left custom-scroll">
         <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
 
           <div>
@@ -140,11 +128,7 @@ function OpenBookView({ book, onClose }) {
       </div>
 
       {/* Right Page */}
-      <div className="custom-scroll" style={{
-        flex: 1, padding: '2.5rem',
-        background: `linear-gradient(to left, transparent, rgba(255,255,255,0.02))`,
-        overflowY: 'auto'
-      }}>
+      <div className="open-book-page-right custom-scroll">
         <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: book.color, letterSpacing: '0.1em', marginBottom: '1rem' }}>WHAT I LEARNED</div>
         <ul style={{ listStyleType: 'square', paddingLeft: '1rem', display: 'flex', flexDirection: 'column', gap: '0.8rem', marginBottom: '1.5rem' }}>
           {book.takeaways.map((t, i) => (
@@ -258,14 +242,8 @@ export default function Library() {
           </AnimatePresence>
         </div>
 
-        {/* Bookshelf Container */}
         <div style={{ width: '100%', marginBottom: '0' }}>
-          <div style={{
-            display: 'flex', alignItems: 'flex-end', gap: '12px',
-            width: '100%', height: 'clamp(260px, 35vh, 320px)',
-            borderBottom: '8px solid #111',
-            padding: '0 4rem', overflowX: 'auto',
-          }} className="custom-scroll">
+          <div className="library-bookshelf custom-scroll">
             <AnimatePresence>
               {filtered.map(book => (
                 <BookSpine

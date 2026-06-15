@@ -335,23 +335,19 @@ a:hover { opacity: 0.8; }
 .library-layout {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   background: var(--bg-deep);
-  overflow: hidden;
 }
 
 .library-left {
   width: 100%;
-  height: 35%;
   padding: 2rem;
-  border-right: none;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   background: rgba(255,255,255,0.01);
   display: flex;
   flex-direction: column;
   z-index: 10;
-  overflow-y: auto;
 }
 
 .library-right {
@@ -360,22 +356,58 @@ a:hover { opacity: 0.8; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  width: 100%;
 }
 
 .library-reader-container {
-  flex: 1;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  overflow-y: auto;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.open-book-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 850px;
+  background: rgba(10,12,16,0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  position: relative;
+}
+
+.open-book-page-left, .open-book-page-right {
+  padding: 1.5rem;
+}
+
+.open-book-page-left {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.02));
+}
+
+.open-book-page-right {
+  background: linear-gradient(to top, transparent, rgba(255,255,255,0.02));
+}
+
+.library-bookshelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  width: 100%;
+  height: clamp(220px, 30vh, 280px);
+  border-bottom: 8px solid #111;
+  padding: 0 2rem;
+  overflow-x: auto;
 }
 
 @media (min-width: 1024px) {
   .library-layout {
     flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
   }
   .library-left {
     width: clamp(280px, 30%, 400px);
@@ -383,9 +415,44 @@ a:hover { opacity: 0.8; }
     padding: 3rem 2.5rem;
     border-right: 1px solid rgba(255,255,255,0.05);
     border-bottom: none;
+    overflow-y: auto;
+  }
+  .library-right {
+    overflow: hidden;
   }
   .library-reader-container {
+    flex: 1;
     padding: 2rem;
     overflow: hidden;
+    margin-bottom: 0;
+  }
+  
+  .open-book-view {
+    flex-direction: row;
+    height: 100%;
+    max-height: 550px;
+    min-height: 350px;
+    overflow: hidden;
+  }
+  
+  .open-book-page-left, .open-book-page-right {
+    flex: 1;
+    padding: 2.5rem;
+    overflow-y: auto;
+  }
+  
+  .open-book-page-left {
+    border-bottom: none;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.02));
+  }
+  
+  .open-book-page-right {
+    background: linear-gradient(to left, transparent, rgba(255,255,255,0.02));
+  }
+
+  .library-bookshelf {
+    height: clamp(260px, 35vh, 320px);
+    padding: 0 4rem;
   }
 }
