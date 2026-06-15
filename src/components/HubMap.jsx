@@ -338,16 +338,16 @@ function PortalCard({ portal, index }) {
 
         {/* Spinning orbit rings */}
         <span aria-hidden style={{
-          position: 'absolute', top: '-30px', right: '-30px',
-          width: '100px', height: '100px', borderRadius: '50%',
-          border: `1px solid rgba(${rgbRaw}, ${hovered ? '0.32' : '0.08'})`,
+          position: 'absolute', top: '-24px', right: '-24px',
+          width: '80px', height: '80px', borderRadius: '50%',
+          border: `1px solid rgba(${rgbRaw}, ${hovered ? '0.20' : '0.05'})`,
           animation: hovered ? 'orbit-spin 5s linear infinite' : 'none',
           transition: 'border-color 0.3s ease', pointerEvents: 'none',
         }} />
         <span aria-hidden style={{
-          position: 'absolute', top: '-16px', right: '-16px',
-          width: '65px', height: '65px', borderRadius: '50%',
-          border: `1px dashed rgba(${rgbRaw}, ${hovered ? '0.22' : '0.05'})`,
+          position: 'absolute', top: '-12px', right: '-12px',
+          width: '50px', height: '50px', borderRadius: '50%',
+          border: `1px dashed rgba(${rgbRaw}, ${hovered ? '0.15' : '0.03'})`,
           animation: hovered ? 'orbit-spin 8s linear infinite reverse' : 'none',
           transition: 'border-color 0.3s ease', pointerEvents: 'none',
         }} />
