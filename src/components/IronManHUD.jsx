@@ -36,10 +36,10 @@ const LINKS = [
   },
 ];
 
-// Ring sizes — Pushed out to be absolutely massive
+// Ring sizes — Scaled down so icons remain visible in standard desktop windows
 const RINGS = [
-  { size: 1150, speed: 25,  dash: '4 12',     opacity: 0.15 },  // Inner
-  { size: 1550, speed: -35, dash: '16 16 2',  opacity: 0.12 }, // Outer
+  { size: 950, speed: 25,  dash: '4 12',     opacity: 0.15 },  // Inner
+  { size: 1250, speed: -35, dash: '16 16 2',  opacity: 0.12 }, // Outer
 ];
 
 const TILT = 60; // 3D Perspective tilt
