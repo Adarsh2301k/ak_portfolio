@@ -1,0 +1,47 @@
+// ─── Projects Data ───────────────────────────────────────────────────────────
+// Used by: Hangar zone
+
+export const projects = [
+  {
+    id: 'hotel-mgmt',
+    title: 'Hotel Management System',
+    tagline: 'Enterprise hotel operations & booking API',
+    category: 'Enterprise',
+    status: 'shipped',
+    year: '2026',
+    problem: 'Hotels need a centralized system to manage bookings, allocate rooms, and track reservations securely.',
+    solution: 'Built a full-stack Angular and Spring Boot application with PostgreSQL integration, handling CRUD operations and simulating real-world hotel workflows.',
+    stack: ['Angular', 'Spring Boot', 'PostgreSQL', 'REST API'],
+    github: '#',
+    demo: '#',
+    highlight: true,
+  },
+  {
+    id: 'rentease',
+    title: 'Rentease',
+    tagline: 'Community marketplace platform',
+    category: 'Web App',
+    status: 'shipped',
+    year: '2025',
+    problem: 'No easy, unified platform existed for posting, browsing, filtering, and managing items for rent within the community.',
+    solution: 'Designed and developed a responsive MERN stack marketplace with RESTful APIs, scalable MongoDB schema, and reusable React components.',
+    stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Axios'],
+    github: '#',
+    demo: '#',
+    highlight: false,
+  },
+  {
+    id: 'unfiltered',
+    title: 'Unfiltered',
+    tagline: 'Social media & profile platform',
+    category: 'Web App',
+    status: 'shipped',
+    year: '2025',
+    problem: 'Social applications require robust authentication and profile management to ensure a seamless and secure user experience.',
+    solution: 'Built a scalable MERN stack social media app with seamless user authentication, profile management, and a responsive UI.',
+    stack: ['React.js', 'Node.js', 'MongoDB', 'Express.js'],
+    github: '#',
+    demo: '#',
+    highlight: false,
+  },
+];

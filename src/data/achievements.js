@@ -1,0 +1,81 @@
+// ─── Achievements Data ────────────────────────────────────────────────────────
+// Used by: HallOfFame zone
+
+export const achievements = [
+  {
+    id: 'capgemini-offer',
+    title: 'Analyst — Capgemini',
+    subtitle: 'Selected through Campus Recruitment · 2026',
+    description: 'Secured an Analyst role at Capgemini via campus placements. Completed rigorous enterprise training in Java, Spring Boot, REST APIs, and full-stack development workflows.',
+    category: 'Career',
+    tier: 'gold',
+    year: 2026,
+    icon: '💼',
+  },
+  {
+    id: 'leetcode-rating',
+    title: 'LeetCode Contest Rating: 1481',
+    subtitle: 'Competitive Programming',
+    description: 'Consistently participated in LeetCode weekly and biweekly contests, achieving a max rating of 1481 through algorithmic problem-solving under time pressure.',
+    category: 'Competition',
+    tier: 'gold',
+    year: 2025,
+    icon: '🏆',
+  },
+  {
+    id: 'dsa-400',
+    title: '400+ DSA Problems Solved',
+    subtitle: 'Data Structures & Algorithms across platforms',
+    description: 'Solved over 400 algorithmic problems across various competitive programming platforms (LeetCode, HackerRank, GeeksforGeeks), mastering core computer science concepts including dynamic programming, graphs, trees, and advanced data structures.',
+    category: 'Milestone',
+    tier: 'gold',
+    year: 2025,
+    icon: '🧩',
+  },
+  {
+    id: 'hackerrank-4star',
+    title: '4-Star in Problem Solving & C++',
+    subtitle: 'HackerRank Mastery',
+    description: 'Achieved a 4-Star badge on HackerRank for both Problem Solving and C++, demonstrating strong logical skills and language proficiency.',
+    category: 'Milestone',
+    tier: 'silver',
+    year: 2024,
+    icon: '⭐',
+  },
+  {
+    id: 'cert-networking',
+    title: 'Cisco Computer Networking Certification',
+    subtitle: 'Core Networking Fundamentals',
+    description: 'Completed Cisco certification covering foundational networking concepts, TCP/IP models, routing protocols, and network troubleshooting.',
+    category: 'Certification',
+    tier: 'bronze',
+    year: 2023,
+    icon: '🌐',
+  },
+  {
+    id: 'cert-java',
+    title: 'HackerRank Java (Basic) Certified',
+    subtitle: 'Language Proficiency Assessment',
+    description: 'Passed the HackerRank Java skill certification test, validating core understanding of Java OOP principles, syntax, and standard libraries.',
+    category: 'Certification',
+    tier: 'bronze',
+    year: 2024,
+    icon: '☕',
+  },
+  {
+    id: 'cert-sql',
+    title: 'HackerRank SQL (Basic) Certified',
+    subtitle: 'Database Querying Assessment',
+    description: 'Passed the HackerRank SQL skill certification test, demonstrating ability to write complex queries, joins, and aggregations.',
+    category: 'Certification',
+    tier: 'bronze',
+    year: 2024,
+    icon: '🗄️',
+  },
+];
+
+export const tierColors = {
+  gold:   { text: '#FFD700', glow: 'rgba(255,215,0,0.25)',   border: 'rgba(255,215,0,0.3)'   },
+  silver: { text: '#C0C0C0', glow: 'rgba(192,192,192,0.2)', border: 'rgba(192,192,192,0.25)' },
+  bronze: { text: '#CD7F32', glow: 'rgba(205,127,50,0.2)',  border: 'rgba(205,127,50,0.25)'  },
+};
